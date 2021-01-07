@@ -82,7 +82,7 @@ dependencies {
     compile 'com.shuyu:gsyVideoPlayer-ex_so:5.0.1'
 
     //    网易IM
-    implementation 'com.github.liubin0304:NeteaseIMSDK:2.7'
+    implementation 'com.github.liubin0304:NeteaseIMSDK:2.8'
     implementation project(path: ':edit_video')
 
 }
