@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 //apply plugin: 'com.jakewharton.butterknife'
 
 apply plugin: 'com.github.dcendents.android-maven'//this
-group = 'com.github.3059485516'//this
+group = 'com.github.liubin0304'//this
 
 
 android {
@@ -82,7 +82,7 @@ dependencies {
     compile 'com.shuyu:gsyVideoPlayer-ex_so:5.0.1'
 
     //    网易IM
-    implementation 'com.github.3059485516:NeteaseIMSDK:2.7'
+    implementation 'com.github.liubin0304:NeteaseIMSDK:2.7'
     implementation project(path: ':edit_video')
 
 }
