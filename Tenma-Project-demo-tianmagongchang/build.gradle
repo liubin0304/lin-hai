@@ -3,8 +3,38 @@
 buildscript {
     ext.kotlin_version = "1.2.60"
     repositories {
+//        google()
+//        jcenter()
+        maven{ url 'https://maven.aliyun.com/repository/public'}
+        maven{ url 'https://maven.aliyun.com/repository/jcenter'}
+        maven{ url 'https://maven.aliyun.com/repository/central'}
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+        maven{ url 'https://maven.aliyun.com/repository/gradle-plugin'}
+
+        maven { url 'http://developer.huawei.com/repo/' }
+        //华为云
+        maven { url 'http://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/' }
+        maven { url 'http://mirrors.huaweicloud.com/repository/maven/' }
+        maven { url 'http://4thline.org/m2' }
+        //天马阿里云效
+        maven {
+            url "https://packages.aliyun.com/maven/repository/2090893-release-FWbkoR/"
+            credentials {
+                username = "6062b8dfd0f3c569faa49ce3"
+                password = "vsyT-7SxDMh5"
+            }
+        }
+
+        // 蜂巢阿里云效
+        maven {
+            credentials {
+                username '607934ec8e4139b4d7bd6c21'
+                password 'B866KYvfPlGT'
+            }
+            url "https://packages.aliyun.com/maven/repository/2096235-release-Fus31H"
+        }
+        maven { url "http://mvn.gt.getui.com/nexus/content/repositories/releases/" }
         google()
-        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
@@ -20,14 +50,46 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
-        maven { url "https://dl.bintray.com/liubin0304/TenmaVentures" }
-        maven { url "https://dl.bintray.com/wuchuncheng/TmTeam" }
-        maven { url "https://jitpack.io" }
-        maven { url 'http://developer.huawei.com/repo' }
+
+//        google()
+//        jcenter()
+
+        maven{ url 'https://maven.aliyun.com/repository/public'}
+        maven{ url 'https://maven.aliyun.com/repository/jcenter'}
+        maven{ url 'https://maven.aliyun.com/repository/central'}
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+        maven{ url 'https://maven.aliyun.com/repository/gradle-plugin'}
+
         maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
-        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+        maven { url "http://lib.gcssloop.com/repository/gcssloop-central/" }
+        maven { url "https://jitpack.io" }
+        maven { url "http://developer.huawei.com/repo" }
+        //华为云
+        maven { url 'http://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/' }
+        maven { url 'http://mirrors.huaweicloud.com/repository/maven/' }
+        maven { url 'http://4thline.org/m2' }
+        //天马阿里云效
+        maven {
+            url "https://packages.aliyun.com/maven/repository/2090893-release-FWbkoR/"
+            credentials {
+                username = "6062b8dfd0f3c569faa49ce3"
+                password = "vsyT-7SxDMh5"
+            }
+        }
+
+        // 蜂巢阿里云效
+        maven {
+            credentials {
+                username '607934ec8e4139b4d7bd6c21'
+                password 'B866KYvfPlGT'
+            }
+            url "https://packages.aliyun.com/maven/repository/2096235-release-Fus31H"
+        }
+
+        // maven私有服
+        maven { url "http://47.105.116.110:8081/repository/tenma/" }
+        maven { url "http://mvn.gt.getui.com/nexus/content/repositories/releases/" }
+        google()
     }
 }
 

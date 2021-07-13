@@ -1,6 +1,7 @@
 package com.ya02wmsj_cecoe.linhaimodule.widget;
 
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -83,6 +84,8 @@ public class CircleProgress extends View {
     }
 
     private void init(Context context, AttributeSet attrs) {
+
+
         mContext = context;
         mDefaultSize = MiscUtil.dipToPx(mContext, 150);
         mAnimator = new ValueAnimator();
@@ -94,9 +97,9 @@ public class CircleProgress extends View {
     }
 
     private void initAttrs(AttributeSet attrs) {
-        TypedArray typedArray = mContext.obtainStyledAttributes(attrs, R.styleable.YLCircleProgressBar);
+        @SuppressLint("CustomViewStyleable") TypedArray typedArray = mContext.obtainStyledAttributes(attrs, R.styleable.YLCircleProgressBar);
         antiAlias = typedArray.getBoolean(R.styleable.YLCircleProgressBar_antiAlias, true);
-        mHint = typedArray.getString(R.styleable.YLCircleProgressBar_hint);
+        mHint = typedArray.getString(R.styleable.YLCircleProgressBar_pb_hint);
         mHintColor = typedArray.getColor(R.styleable.YLCircleProgressBar_hintColor, Color.BLACK);
         mHintSize = typedArray.getDimension(R.styleable.YLCircleProgressBar_hintSize, 15);
         mValue = typedArray.getFloat(R.styleable.YLCircleProgressBar_value, 50);
